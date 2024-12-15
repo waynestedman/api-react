@@ -2,6 +2,7 @@
 
 import { QueryClient, QueryClientProvider, } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+import APOD from './APOD';
 
 function App() {
   // Create a client
@@ -10,7 +11,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
         <>
-          <h2>App loaded</h2>
+          <APOD />
         </>
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
