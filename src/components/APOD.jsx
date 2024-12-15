@@ -29,11 +29,11 @@ function APOD() {
         ) : query.isError ? (
           <p>Error: {query.error.message}</p>
         ) : (
-        <>
-          <h4>{query.data.title}</h4>
-          <img src={query.data.url} alt={query.data.title} />
-          <p>{query.data.explanation}</p>
-        </>
+      <>
+        <h4>{query.data.title}</h4>
+        <img src={query.data.url} alt={query.data.title} />
+        <p>{query.data.explanation}</p>
+      </>
       )}
     </section>
   )
