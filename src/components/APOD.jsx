@@ -1,19 +1,13 @@
 // APOD.jsx
 
 import axios from 'axios';
-import { useQuery } from '@tanstack/react-query'
+import { useQuery } from '@tanstack/react-query';
+import API from './API';
 
-const apiURL = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY";
+const apiURL = "https://api.nasa.gov/planetary/apod?api_key=fTXa1bg4VBf2Wc6dq05GzMOX3vM05gWVgfWYe0tQ";
 
 async function getApod() {
-  axios.get(apiURL)
-  try {
-    const response = await axios.get(apiURL);
-    console.log(response);
-    return response.data;
-  } catch (error) {
-    console.error(error);
-  }
+  return API(apiURL);
 }
 
 function APOD() {
